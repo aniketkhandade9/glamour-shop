@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cosmetics Shop - Your Beauty Destination</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+ 
+
+    
+  <header>
+    <nav class="container">
+      <div class="logo">Glamour Shop</div>
+       <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="#Shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        
+        <button id="show-cart-btn">View Cart</button>
+        <button id="login-btn" aria-haspopup="dialog" aria-controls="login-modal">Login</button>
+      </div>
+      <div id="cart-popup" class="cart-popup hidden">
+                <h3>Your Cart</h3>
+                <ul id="cart-items-list"></ul>
+                 <button id="close-cart-btn">Close</button>
+        </div>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search products..." />
+      <button id="search-button">Search</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Discover Beauty, Discover You</h1>
+      <p>Your one-stop cosmetics shop to elevate your style with premium beauty products.</p>
+      <button class="cta" id="shop-now-btn">Shop Now</button>
+    </section>
+    
+
+    <section class="products-grid" id="Shop">
+      
+      <!-- Example Product Card with data-name attribute -->
+      <article class="product-card" data-name="Crimson Velvet Lipstick">
+        <figure class="product-image">
+          <img src="./lipstick.jpeg" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Crimson Velvet Lipstick</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹100</div>
+          <button onclick="addToCart('Crimson Velvet Lipstick')">Add to Cart</button>
+        </div>
+        
+        
+      </article>
+      <article class="product-card" data-name="Crimson Velvet Lipstick">
+        <figure class="product-image">
+          <img src="./blush.avif" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Blush</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹200</div>
+          <button onclick="addToCart('Blush')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="Concealer">
+        <figure class="product-image">
+          <img src="./Concealer.jpg" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Concealer</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹3000</div>
+          <button onclick="addToCart('Concealer')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="Eyeliner">
+        <figure class="product-image">
+          <img src="./eyeliner.webp" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Eyeliner</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹800</div>
+          <button onclick="addToCart('Eyeliner')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="foundation">
+        <figure class="product-image">
+          <img src="./foundation.jpeg" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Foundation</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹699</div>
+          <button onclick="addToCart('Foundation')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="mascara">
+        <figure class="product-image">
+          <img src="./mascara.png" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Mascara</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹699</div>
+          <button onclick="addToCart('Mascara')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="Crimson Velvet Lipstick">
+        <figure class="product-image">
+          <img src="./blush.avif" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Blush</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹699</div>
+          <button onclick="addToCart('Blush')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="Crimson Velvet Lipstick">
+        <figure class="product-image">
+          <img src="./organic-skin-care-products-private-label.jpg" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Organic skin care products</h3>
+          <p class="product-desc">Organic_skin_care_products_private_label</p>
+          <div class="product-price">₹700</div>
+          <button onclick="addToCart('Blush')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="Crimson Velvet Lipstick">
+        <figure class="product-image">
+          <img src="./natural-skincare-products-1000x1000.jpg" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Natural skincare products</h3>
+          <p class="product-desc">Natural_skincare_products</p>
+          <div class="product-price">₹712</div>
+          <button onclick="addToCart('natural-skincare-products')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="Crimson Velvet Lipstick">
+        <figure class="product-image">
+          <img src="./95-products-hd-cosmetic-products-with-makeup-box-inwish-original-imagqd6j9qhufbt6.webp" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Cosmetic-products-with-makeup-box</h3>
+          <p class="product-desc">Smooth matte finish with long-lasting wear.</p>
+          <div class="product-price">₹1500</div>
+          <button onclick="addToCart('cosmetic-products-with-makeup-box')">Add to Cart</button>
+        </div>
+      </article>
+      </article>
+      <article class="product-card" data-name="Crimson Velvet Lipstick">
+        <figure class="product-image">
+          <img src="./Beauty-with-Confidence-by-Cosmetics-Testing-of-FARE-Labs-scaled.webp" alt="Crimson Velvet Lipstick" />
+        </figure>
+        <div class="product-info">
+          <h3 class="product-title">Beauty with Confidence by Cosmetics Testing of FARE</h3>
+          <p class="product-desc">Beauty_with_Confidence_by_Cosmetics_Testing_of_FARE_Labs_scaled</p>
+          <div class="product-price">₹1200</div>
+          <button onclick="addToCart('Blush')">Add to Cart</button>
+        </div>
+      </article>
+      <!-- Add additional product cards with data-name -->
+    </section>
+  </main>
+
+  
+
+  <!-- Cart Popup -->
+  <div id="cart-popup" class="cart-popup hidden">
+    <h3>Your Cart</h3>
+    <ul id="cart-items-list"></ul>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+
+  
+<!-- Login Modal -->
+<div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="login-title">
+  <div class="modal">
+    <button aria-label="Close Login Modal" class="close-modal" id="close-login-modal-btn">&times;</button>
+    <h2 id="login-title">Login to CosmeticsShop</h2>
+    <form id="login-form" novalidate>
+      <label for="login-email-input">Email Address</label>
+      <input type="email" id="login-email-input" name="email" placeholder="you@example.com" required autocomplete="username" />
+      <span class="error-message" id="login-email-error" aria-live="polite"></span>
+
+      <label for="login-password-input">Password</label>
+      <input type="password" id="login-password-input" name="password" placeholder="Your password" required autocomplete="current-password" />
+      <span class="error-message" id="login-password-error" aria-live="polite"></span>
+
+      <button type="submit" id="login-submit-btn">Log In</button>
+      <span class="error-message" id="login-error" aria-live="polite"></span>
+    </form>
+    <p class="switch-modal">Don't have an account? <a href="#" id="open-register-link">Register</a></p>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div id="register-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="register-title">
+  <div class="modal">
+    <button aria-label="Close Register Modal" class="close-modal" id="close-register-modal-btn">&times;</button>
+    <h2 id="register-title">Create Your Account</h2>
+    <form id="register-form" novalidate>
+      <label for="reg-name-input">Full Name</label>
+      <input type="text" id="reg-name-input" name="name" placeholder="Name_Sername" required />
+      <span class="error-message" id="reg-name-error" aria-live="polite"></span>
+
+      <label for="reg-email-input">Email Address</label>
+      <input type="email" id="reg-email-input" name="email" placeholder="you@example.com" required autocomplete="username" />
+      <span class="error-message" id="reg-email-error" aria-live="polite"></span>
+
+      <label for="reg-password-input">Password</label>
+      <input type="password" id="reg-password-input" name="password" placeholder="Create a password" required autocomplete="new-password" />
+      <span class="error-message" id="reg-password-error" aria-live="polite"></span>
+
+      <label for="reg-confirm-input">Confirm Password</label>
+      <input type="password" id="reg-confirm-input" name="confirm" placeholder="Repeat password" required autocomplete="new-password" />
+      <span class="error-message" id="reg-confirm-error" aria-live="polite"></span>
+
+      <button type="submit" id="register-submit-btn">Sign Up</button>
+      <span class="error-message" id="register-error" aria-live="polite"></span>
+    </form>
+    <p class="switch-modal">Already have an account? <a href="#" id="open-login-link">Log in</a></p>
+  </div>
+</div>
+
+
+
+
+  <script src="script.js"></script>
+
+
+
+  <footer>
+    &copy; 2025 Cosmetics Shop. All Rights Reserved.
+  </footer>
+</body>
+</html>
